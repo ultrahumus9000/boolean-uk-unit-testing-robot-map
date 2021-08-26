@@ -1,9 +1,9 @@
-const { moveLeft } = require("./movement");
+const { moveLeft, moveRight, moveUp, moveDown } = require("./movement");
 const { printPosition } = require("./print");
 
 const sizeOfGrid = {
   width: 10,
-  height: 10
+  height: 10,
 };
 
 function main() {
@@ -11,6 +11,10 @@ function main() {
   let positionStatement = "";
 
   currentPosition = moveLeft(currentPosition);
+  currentPosition = moveRight(currentPosition);
+  currentPosition = moveUp(currentPosition);
+  currentPosition = moveDown(currentPosition);
+
   positionStatement = printPosition(currentPosition);
 
   console.log(positionStatement);
